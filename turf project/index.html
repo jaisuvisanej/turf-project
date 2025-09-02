@@ -115,29 +115,7 @@ p {
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
-  .bg-tournament-dark {
-    background-color: #1a1a1a;
-  }
-  .facilities-section {
-    background-color: #000;
-    color: #ffffff;
-  }
-  .icon-lightbulb {
-    color: #ffc107;
-  }
-  .icon-shower {
-    color: #17a2b8;
-  }
-  .icon-parking {
-    color: #28a745;
-  }
-  .icon-clock {
-    color: #dc3545;
-  }
-  .bg-footer-dark {
-    background-color: #222;
-  }
-</style>
+  </style>
 <body>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
   <div class="container-fluid">
@@ -211,11 +189,9 @@ p {
   </a>
 </div>
 
-
-<section class="tournament-section py-5 bg-tournament-dark" id="winners">
 <!-- card section -->
 
-<section class="tournament-section py-5 bg-tournament-dark" id="winners">
+<section class="tournament-section py-5" style="background-color: #1a1a1a;" id="winners">
   <div class="container">
     <h2 class="text-center mb-5 text-white text-3xl">Tournament Winnwes</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -261,31 +237,31 @@ p {
       </div>
     </div>
   </div>
-<section class="py-5 facilities-section">
+</section>
 
 <!-- Facilities Section -->
 
-<section class="py-5 facilities-section">
+<section class="py-5" style="background-color: #000; color: #ffffff;">
   <div class="container text-center">
-       
+    <h2 class="mb-5 text-3xl" data-aos="fade-down">Our Facilities</h2>
     <div class="row">
       <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
-        <i class="fas fa-lightbulb fa-2x mb-3 icon-lightbulb"></i>
-        <h5>Floodlights</h5><br>
-       
+        <i class="fas fa-lightbulb fa-2x mb-3" style="color: #ffc107;"></i>
+        <h5>Floodlights</h5>
+        <p>Play even at night with professional lighting.</p><br>
       </div>
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-shower fa-2x mb-3 icon-shower"></i>
-        <h5>Changing Rooms</h5><br>
-        
+        <i class="fas fa-shower fa-2x mb-3" style="color: #17a2b8;"></i>
+        <h5>Changing Rooms</h5>
+        <p>Comfortable facilities before and after your game.</p><br>
       </div>
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-parking fa-2x mb-3 icon-parking"></i>
-        <h5>Parking</h5><br>
-       
+        <i class="fas fa-parking fa-2x mb-3" style="color: #28a745;"></i>
+        <h5>Parking</h5>
+        <p>Ample space for bikes and cars.</p><br>
       </div>
       <div class="col-md-3" data-aos="fade-left" data-aos-delay="400">
-        <i class="fas fa-clock fa-2x mb-3 icon-clock"></i>
+        <i class="fas fa-clock fa-2x mb-3" style="color: #dc3545;"></i>
         <h5>24/7 Booking</h5>
         <p>Book anytime, anywhere online.<br>*No Cancellation*</p>
       </div>
@@ -295,26 +271,23 @@ p {
 
 <!-- Booking Section -->
 
-<!-- Include Flatpickr CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-<section class="py-10 bg-black text-white text-center" id="booking-section">
+<section class="py-10 bg-gray-100 text-center" id="booking-section">
   <h2 class="text-3xl font-bold mb-6">Book Your Slot</h2>
 
-  <div class="max-w-xl mx-auto bg-gray-900 shadow-lg rounded-2xl p-6">
+  <div class="max-w-xl mx-auto bg-white shadow-lg rounded-2xl p-6">
     <!-- Date Picker -->
     <label for="booking-date" class="block text-left font-semibold mb-2">Choose a Date:</label>
-    <input type="text" id="booking-date" class="w-full px-4 py-2 border rounded-md mb-6 bg-black text-white border-gray-600" placeholder="Select Date" />
+    <input type="date" id="booking-date" class="w-full px-4 py-2 border rounded-md mb-6" />
 
     <!-- From Time Slot -->
-    <label for="from-slot" class="block text-left font-semibold mb-2">From:</label>
-    <select id="from-slot" class="w-full px-4 py-2 border rounded-md mb-4 bg-black text-white border-gray-600" aria-label="From time slot">
+    <label class="block text-left font-semibold mb-2">From:</label>
+    <select id="from-slot" class="w-full px-4 py-2 border rounded-md mb-4">
       <!-- Filled dynamically -->
     </select>
 
     <!-- To Time Slot -->
-    <label for="to-slot" class="block text-left font-semibold mb-2">To:</label>
-    <select id="to-slot" class="w-full px-4 py-2 border rounded-md mb-6 bg-black text-white border-gray-600" aria-label="To time slot">
+    <label class="block text-left font-semibold mb-2">To:</label>
+    <select id="to-slot" class="w-full px-4 py-2 border rounded-md mb-6">
       <!-- Filled dynamically -->
     </select>
 
@@ -323,15 +296,6 @@ p {
     </button>
   </div>
 </section>
-<!-- Include Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-  // Initialize calendar
-  flatpickr("#booking-date", {
-    dateFormat: "Y-m-d",
-    minDate: "today",   // Disable past dates
-  });
-</script>
 
 <!-- divided section -->
 
@@ -341,7 +305,7 @@ p {
       
       <!-- Left Column: Scrolling Marquee -->
       <div class="overflow-hidden relative">
-        <h2 class="text-black text-2xl md:text-3xl font-bold mb-4">🏆 Upcoming Tournaments & individual Achivements</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">🏆 Upcoming Tournaments & individual Achivements</h2>
         
         <div class="relative w-full h-44">
           <div class="flex animate-marquee space-x-6 absolute whitespace-nowrap">
@@ -350,21 +314,21 @@ p {
             <div class="flex space-x-6">
               <!-- Card 1 -->
               <div class="bg-white rounded-xl shadow-md p-4 w-72 text-left">
-                <h3 class="text-black font-semibold mb-1">Summer Slam 2025</h3>
+                <h3 class="text-xl font-semibold mb-1">Summer Slam 2025</h3>
                 <p class="text-black">July 20 - July 25</p>
                 <p class="text-black">KN Sports Arena Turf</p>
               </div>
 
               <!-- Card 2 -->
               <div class="bg-white rounded-xl shadow-md p-4 w-72 text-left">
-                <h3 class="text-black font-semibold mb-1">Winter Knockout</h3>
+                <h3 class="text-xl font-semibold mb-1">Winter Knockout</h3>
                 <p class="text-black">Dec 10 - Dec 15</p>
                 <p class="text-black">KN Sports Arena Turf</p>
               </div>
 
               <!-- Card 3 -->
               <div class="bg-white rounded-xl shadow-md p-4 w-72 text-left">
-                <h3 class="text-black font-semibold mb-1">Best player<br>Player-name: Shalem</h3>
+                <h3 class="text-xl font-semibold mb-1">Best player<br>Player-name: Shalem</h3>
                 <p class="text-black">Matches: 20</p>
                 <p class="text-black">Runs: 560</p>
                 <p class="text-black">Wickets: 24</p>
@@ -372,7 +336,7 @@ p {
 
               <!-- Card 4 -->
               <div class="bg-white rounded-xl shadow-md p-4 w-72 text-left">
-                <h3 class="text-black font-semibold mb-1">Best Team<br>Team Thunder</h3>
+                <h3 class="text-xl font-semibold mb-1">Best Team<br>Team Thunder</h3>
                 <p class="text-black">Played: 20</p>
                 <p class="text-black">Wins: 14</p>
                 <p class="text-black">Losses: 6</p>
@@ -383,7 +347,7 @@ p {
             <div class="flex space-x-6">
               <!-- Duplicate Card 1 -->
               <div class="bg-white rounded-xl shadow-md p-4 w-72 text-left">
-                <h3 class="text-black font-semibold mb-1">Summer Slam 2025</h3>
+                <h3 class="text-xl font-semibold mb-1">Summer Slam 2025</h3>
                 <p class="text-black">July 20 - July 25</p>
                 <p class="text-black">KN Sports Arena Turf</p>
               </div>
@@ -441,16 +405,20 @@ p {
 
   <!-- Instagram Button inside Contact Section -->
   <div class="mt-4">
-    <a href="https://www.instagram.com/kn_sports_arena" target="_blank" rel="noopener" class="btn btn-outline-light">
+    <a href="https://www.instagram.com/kn_sports_arena" target="_blank" class="btn btn-outline-light">
       <i class="fab fa-instagram me-2"></i> Follow us on Instagram
     </a><br>
   </div>
 </div>
 
-  <div class="text-center p-3 bg-footer-dark">
+
+
+
+  <div class="text-center p-3" style="background-color: #222;">
     © 2025 KN Sports Arena. All rights reserved.
   </div>
- 
+</footer>
+
 <!-- AOS Script -->
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
